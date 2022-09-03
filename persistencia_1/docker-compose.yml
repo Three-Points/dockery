@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:9.6.2
+    container_name: postgres
+    restart: always
+    ports:
+      - ${PG_PORT}:${PG_PORT}
+    environment:
+      POSTGRES_PASSWORD: ${PG_PASSWORD}
+      POSTGRES_USER: ${PG_USER}
+    volumes:
+      - db-persistence:/var/lib/postgresql/data
+      - ./docker/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  db-persistence:
+    name: db-persistence
