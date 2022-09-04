@@ -1,0 +1,44 @@
+services:
+  postgres:
+    image: postgres
+    container_name: postgres
+    restart: always
+    ports:
+      - ${PG_PORT}:${PG_PORT}
+    environment:
+      POSTGRES_PASSWORD: ${PG_PASSWORD}
+      POSTGRES_USER: ${PG_USER}
+      POSTGRES_DB: ${PG_DB}
+    volumes:
+      - drupal-db:/var/lib/postgresql/data
+    networks:
+      - drupal-network
+
+  drupal:
+    image: drupal
+    container_name: drupal
+    restart: always
+    ports:
+      - ${DRUPAL_PORT}:80
+    volumes:
+      - drupal-db:/var/lib/postgresql/data
+    networks:
+      - drupal-network
+    depends_on:
+      - postgres
+
+volumes:
+  drupal-db:
+    name: drupal-db
+  drupal-modules:
+    name: drupal-modules
+  drupal-profiles:
+    name: drupal-profiles
+  drupal-sites:
+    name: drupal-sites
+  drupal-themes:
+    name: drupal-themes
+
+networks:
+  drupal-network:
+    name: drupal-network
