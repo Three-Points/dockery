@@ -14,9 +14,30 @@ services:
     networks:
       - drupal-network
 
+  drupal:
+    image: drupal
+    container_name: drupal
+    restart: always
+    ports:
+      - ${DRUPAL_PORT}:80
+    volumes:
+      - drupal-db:/var/lib/postgresql/data
+    networks:
+      - drupal-network
+    depends_on:
+      - postgres
+
 volumes:
   drupal-db:
     name: drupal-db
+  drupal-modules:
+    name: drupal-modules
+  drupal-profiles:
+    name: drupal-profiles
+  drupal-sites:
+    name: drupal-sites
+  drupal-themes:
+    name: drupal-themes
 
 networks:
   drupal-network:
