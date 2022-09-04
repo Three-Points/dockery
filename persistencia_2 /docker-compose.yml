@@ -1,0 +1,12 @@
+services:
+  node:
+    build: .
+    container_name: hello-world
+    ports:
+      - ${PORT}:${PORT}
+    expose:
+      - ${PORT}
+    environment:
+      - NAME
+      - PORT
+      - SERVER_URL
