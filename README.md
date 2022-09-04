@@ -19,7 +19,7 @@ By activity rules, the present project will be structure in several directories 
 
 This project was documented using Wiki documentation of GitHub to click the next link:
 
-![Wiki GitHub](https://img.shields.io/badge/Wiki_GitHub-ECEFF4?style=for-the-badge&logo=Github&logoColor=2E3440)
+[![Wiki GitHub](https://img.shields.io/badge/Wiki_GitHub-ECEFF4?style=for-the-badge&logo=Github&logoColor=2E3440)](https://github.com/Three-Points/dockery/wiki)
 
 **Content**
 1. [Database Persistence Migration](https://github.com/Three-Points/dockery/wiki/1.-Database-Persistence-Migration)
