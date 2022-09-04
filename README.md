@@ -15,6 +15,18 @@ By activity rules, the present project will be structure in several directories 
 > You consider having docker installed.
 > The project was developed using Docker v20.10.17 and Docker Compose v2.7.0
 
+### 📚 Documentation
+
+This project was documented using Wiki documentation of GitHub to click the next link:
+
+![Wiki GitHub](https://img.shields.io/badge/Wiki_GitHub-ECEFF4?style=for-the-badge&logo=Github&logoColor=2E3440)
+
+**Content**
+1. [Database Persistence Migration](https://github.com/Three-Points/dockery/wiki/1.-Database-Persistence-Migration)
+2. [Dynamic Bind Mount](https://github.com/Three-Points/dockery/wiki/2.-Dynamic-Bind-Mount)
+3. [Docker Compose, Build Image and Persistence](https://github.com/Three-Points/dockery/wiki/3.-Docker-Compose,-Build-Image-and-Persistence)
+4. [Drupal and Postgres](https://github.com/Three-Points/dockery/wiki/4.-Drupal-and-Postgres)
+
 ### ✍️ Author
 
 > **Emmanuel Rodriguez** - ⚡️ Software Engineer
